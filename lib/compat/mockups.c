@@ -8,6 +8,8 @@
 #include "compat.h"
 
 #ifdef _WIN32
+#include <stdio.h>
+
 int fchownat(int dirfd, const char *path, int uid, int gid, int flags)
 {
 	if (dirfd != AT_FDCWD) {
